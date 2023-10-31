@@ -5,9 +5,15 @@ def encode(password):
         decoded += str((int(num) + 3) % 10)
     return decoded
 
-
+# decodes password
 def decode(password):
-    return 0
+    decoded = ''
+    # iterates for each character in the string
+    for num in password:
+        # Type casts the string as an int to apply math module and then back to string to print it
+        decoded += str((int(num) - 3) % 10)
+    return decoded
+    
 
 
 # executes code
